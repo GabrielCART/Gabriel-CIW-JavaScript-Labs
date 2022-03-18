@@ -15,15 +15,40 @@
     <p>Please click the button now</p>
     <script type="text/javascript">
         var div = null;
-        function getValues()
-        {
-            if (div == null) 
-            {
-            div = document.getElementById("SetDiv");
+        function getValues() {
+                if (div == null) {
+                    div = document.getElementById("SetDiv");
+                }
+                alert(div.id);
+                alert(div.special_attribute); // returns undefined
+                changeValues();
             }
-            alert(div.id);  
-            alert(div.special_attribute);   
-         }   
+            function changeValues() {
+                if (div == null) {
+                    div = document.getElementById("SetDiv");
+                }
+                var d = document.getElementById("SetDiv");
+                d.setAttribute("title", "div1");
+                alert(div.title);
+                RemoveValues();
+            }
+            function RemoveValues() {
+                if (div == null) {
+                    div = document.getElementById("SetDiv");
+                }
+                var d = document.getElementById("SetDiv");
+                d.removeAttribute("title");
+                alert(div.title);
+                ChangeValuesBack();
+            }
+            function ChangeValuesBack() {
+                if (div == null) {
+                    div = document.getElementById("SetDiv");
+                }
+                var d = document.getElementById("SetDiv");
+                d.setAttribute("title", "div2");
+                alert(div.title);
+            }
     </script>
 </body>
 </html>

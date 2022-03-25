@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8" />
+<meta charset="utf-8"/>
 <title>Lab 10-5</title>
 <script type="text/javascript">
     function checkForm()
@@ -10,17 +10,22 @@
         var elem = document.getElementById('myForm').elements;
 
        //Insert for statement here//
-
-
+       for (var i = 0; i < elem.length; i++) {
+        if (elem[i].value.length < 1) {
+            alert("Enter something for the field: " + elem[i].name);
+            var mytext = document.getElementById(elem[i].name);
+            mytext.focus();
+            return false;
+        }
      }
 </script>
 </head>
 
 <body>
 <h3>CIW JavaScript Specialist</h3>
-<hr />
+<hr/>
 
-<form id="myForm" name="myForm" action="lab7-5a.htm">
+<form id="myForm" name="myForm" action="lab10-5a.htm">
 <p>
 Your Name: <br /><br />
 <input type="text" name="Your_Name" id="Your_Name"  value="enter your name" />

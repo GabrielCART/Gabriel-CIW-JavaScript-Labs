@@ -10,19 +10,20 @@
         var elem = document.getElementById('myForm').elements;
 
        //Insert for statement here//
-        for (i = 0; i <elem.length; i++){
-          if (elem[i].value.length < 1);
-          mytext.focus();
-          return false;
+       for (var i = 0; i < elem.length; i++) {
+        if (elem[i].value.length < 1) {
+            alert("Enter something for the field: " + elem[i].name);
+            var mytext = document.getElementById(elem[i].name);
+            mytext.focus();
+            return false;
         }
-
      }
 </script>
 </head>
 
 <body>
 <h3>CIW JavaScript Specialist</h3>
-<hr />
+<hr/>
 
 <form id="myForm" name="myForm" action="lab10-5a.htm">
 <p>

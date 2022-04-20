@@ -20,3 +20,7 @@
 #slideshow img.last-active {
     z-index:9;
 }
+
+<script src="jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="script.js" type="text/javascript" charset="utf-8"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
